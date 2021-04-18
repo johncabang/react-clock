@@ -22,7 +22,7 @@ import Quote from "../Quote";
 
 const ACCESS_KEY = process.env.REACT_APP_ACCESS_KEY;
 
-const Main = () => {
+const Main = ({ isOpen, toggle }) => {
   const [currentTime, setCurrentTime] = useState("");
   const [abbreviation, setAbbreviation] = useState("");
   const [currentTimezone, setCurrentTimezone] = useState("");
@@ -67,8 +67,8 @@ const Main = () => {
   }, []);
 
   return (
-    <MainContainer>
-      <Quote />
+    <MainContainer isOpen={isOpen}>
+      <Quote isOpen={isOpen} />
       <ClockContainer>
         <ClockWrapper>
           <ClockGreetingContainer>
@@ -87,7 +87,7 @@ const Main = () => {
             IN {city}, {countryCode}
           </ClockLocation>
         </ClockWrapper>
-        <Button />
+        <Button toggle={toggle} isOpen={isOpen} />
       </ClockContainer>
     </MainContainer>
   );

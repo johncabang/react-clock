@@ -9,7 +9,7 @@ export const ClockButtonContainer = styled.nav`
 export const ClockButtonLink = styled.button`
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   background-color: #fff;
   border: none;
   border-radius: 25px;
@@ -22,6 +22,7 @@ export const ClockButtonLink = styled.button`
   white-space: nowrap;
   letter-spacing: 5px;
   font-weight: bold;
+  width: 140px;
 `;
 
 export const ClockButtonCircle = styled.div`

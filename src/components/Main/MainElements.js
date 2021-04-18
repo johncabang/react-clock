@@ -4,10 +4,12 @@ import styled from "styled-components";
 import nightBg from "./../../assets/desktop/bg-image-nighttime.jpg";
 
 export const MainContainer = styled.div`
+  transition: 0.5s ease-in-out;
+
   display: flex;
   justify-content: center;
   flex-direction: column;
-  height: 100vh;
+  height: ${({ isOpen }) => (isOpen ? "50vh" : "100vh")};
   color: #fff;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url(${nightBg});

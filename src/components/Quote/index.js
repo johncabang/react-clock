@@ -3,7 +3,7 @@ import Axios from "axios";
 
 import { QuoteAuthor, QuoteBody, QuoteContainer } from "./QuoteElements";
 
-const Quote = () => {
+const Quote = ({ isOpen }) => {
   const [quoteBody, setQuoteBody] = useState("");
   const [quoteAuthor, setQuoteAuthor] = useState("");
 
@@ -19,10 +19,16 @@ const Quote = () => {
   }, []);
 
   return (
-    <QuoteContainer>
-      <QuoteBody>“{quoteBody}”</QuoteBody>
-      <QuoteAuthor>{quoteAuthor}</QuoteAuthor>
-    </QuoteContainer>
+    <>
+      {isOpen ? (
+        ""
+      ) : (
+        <QuoteContainer>
+          <QuoteBody>“{quoteBody}”</QuoteBody>
+          <QuoteAuthor>{quoteAuthor}</QuoteAuthor>
+        </QuoteContainer>
+      )}
+    </>
   );
 };
 

@@ -6,11 +6,11 @@ import {
 
 import arrow from "./../../assets/desktop/icon-arrow-up.svg";
 
-const Button = () => {
+const Button = ({ toggle, isOpen }) => {
   return (
     <ClockButtonContainer>
-      <ClockButtonLink>
-        MORE
+      <ClockButtonLink onClick={toggle}>
+        {!isOpen ? "MORE" : "LESS"}
         <ClockButtonCircle>
           <img src={arrow} alt="arrow" />
         </ClockButtonCircle>
