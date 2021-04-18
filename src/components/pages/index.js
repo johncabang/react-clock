@@ -25,6 +25,7 @@ const Home = () => {
   const getTime = async () => {
     await Axios.get("https://worldtimeapi.org/api/ip/")
       .then((response) => {
+        console.log(response.data);
         setCurrentTime(response.data.datetime);
         setAbbreviation(response.data.abbreviation);
         setCurrentTimezone(response.data.timezone);
