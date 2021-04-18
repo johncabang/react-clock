@@ -26,14 +26,13 @@ Users should be able to:
 
 - [React](https://reactjs.org/) - JS library
 - [Styled Components](https://styled-components.com/) - For styles
-- [Moment JS](https://momentjs.com/)
+- [Moment JS](https://momentjs.com/) - Time
 
 ### APIs
 
 - [World Time API](http://worldtimeapi.org/) to set the time based on the visitor's IP adress. This API will also be used for additional data, like the day of the year shown in the expanded state.
-- [IP Geolocation API](https://freegeoip.app/) to set the city and country underneath the time
+- [IPstack API](https://ipstack.com/) to set the city and country underneath the time
 - [Programming Quotes API](https://programming-quotes-api.herokuapp.com/) to generate random programming quotes.
-  - If the Programming Quotes API doesn't work, [here's a good alternative quote API](https://github.com/lukePeavey/quotable) you can use instead. It's not programming specific, but it will do the trick.
 
 ### Preview
 

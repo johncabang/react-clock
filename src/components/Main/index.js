@@ -29,29 +29,8 @@ const Main = () => {
   const [dayOfYear, setDayOfYear] = useState("");
   const [dayOfWeek, setDayOfWeek] = useState("");
   const [weekNumber, setWeekNumber] = useState("");
-  const [geoLocationIp, setGeoLocationIp] = useState("");
   const [city, setCity] = useState("");
-  const [regionCode, setRegionCode] = useState("");
-
-  // useEffect(() => {
-  //   const fetchData = async () => {
-  //     const results = await Axios("https://worldtimeapi.org/api/ip/");
-  //     setCurrentTime(results.data.datetime);
-  //     setAbbreviation(results.data.abbreviation);
-  //     setCurrentTimezone(results.data.timezone);
-  //     setDayOfYear(results.data.day_of_year);
-  //     setDayOfWeek(results.data.day_of_week);
-  //     setWeekNumber(results.data.week_number);
-  //     setGeoLocationIp(results.data.client_ip);
-
-  //     const locationResults = await Axios(
-  //       `http://api.ipstack.com/${geoLocationIp}?access_key=e5b7e5a6fa98709c0e842812a3d0bfa4`
-  //     );
-  //     setCity(locationResults.data.city.toUpperCase());
-  //     setRegionCode(locationResults.data.region_code);
-  //   };
-  //   fetchData();
-  // }, []);
+  const [countryCode, setCountryCode] = useState("");
 
   const getTime = async () => {
     await Axios.get("https://worldtimeapi.org/api/ip/")
@@ -63,16 +42,16 @@ const Main = () => {
         setDayOfYear(response.data.day_of_year);
         setDayOfWeek(response.data.day_of_week);
         setWeekNumber(response.data.week_number);
-        setGeoLocationIp(response.data.client_ip);
 
-        return Axios.get(
-          `http://api.ipstack.com/${geoLocationIp}?access_key=${ACCESS_KEY}`
+        Axios.get(
+          `http://api.ipstack.com/${response.data.client_ip}?access_key=${ACCESS_KEY}`
         )
           .then((response) => {
+            // console.log(response.data);
             // console.log(response.data.city);
-            // console.log(response.data.region_code);
+            // console.log(response.data.country_code);
             setCity(response.data.city.toUpperCase());
-            setRegionCode(response.data.region_code);
+            setCountryCode(response.data.country_code);
           })
           .catch((err) => {
             console.log("Location API Error", err);
@@ -83,24 +62,8 @@ const Main = () => {
       });
   };
 
-  // const getLocation = () => {
-  //   Axios.get(
-  //     `http://api.ipstack.com/${geoLocationIp}?access_key=e5b7e5a6fa98709c0e842812a3d0bfa4`
-  //   )
-  //     .then((response) => {
-  //       // console.log(response.data.city);
-  //       setCity(response.data.city.toUpperCase());
-  //       // console.log(response.data.region_code);
-  //       setRegionCode(response.data.region_code);
-  //     })
-  //     .catch((err) => {
-  //       console.log("Location API Error", err);
-  //     });
-  // };
-
   useEffect(() => {
     getTime();
-    // getLocation();
   }, []);
 
   return (
@@ -121,7 +84,7 @@ const Main = () => {
             <ClockTimeZone>{abbreviation}</ClockTimeZone>
           </ClockTimeContainer>
           <ClockLocation>
-            IN {city}, {regionCode}
+            IN {city}, {countryCode}
           </ClockLocation>
         </ClockWrapper>
         <Button />
