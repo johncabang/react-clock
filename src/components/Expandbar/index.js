@@ -14,10 +14,11 @@ const ExpandBar = ({
   dayOfYear,
   dayOfWeek,
   weekNumber,
+  dayTime,
 }) => {
   return (
     <ExpandbarContainer isOpen={isOpen} onClick={toggle}>
-      <ExpandbarWrapper>
+      <ExpandbarWrapper dayTime={dayTime}>
         <ExpandbarTextContainer>
           <ExpandbarTextWrapper>
             <ExpandbarTitle>CURRENT TIMEZONE</ExpandbarTitle>

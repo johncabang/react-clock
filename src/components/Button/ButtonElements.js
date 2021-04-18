@@ -27,6 +27,8 @@ export const ClockButtonLink = styled.button`
 
 export const ClockButtonCircle = styled.div`
   display: flex;
+  justify-content: center;
   width: 30px;
   height: 30px;
+  }
 `;

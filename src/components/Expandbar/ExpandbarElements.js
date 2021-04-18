@@ -15,7 +15,7 @@ export const ExpandbarContainer = styled.aside`
 
   @media screen and (max-width: 375px) {
     transition: 0.8s all ease;
-    height: 40vh;
+    height: 35vh;
   }
 `;
 
@@ -27,6 +27,9 @@ export const ExpandbarWrapper = styled.div`
   align-items: center;
   width: 100%;
   height: 100%;
+  background-color: ${({ dayTime }) =>
+    dayTime ? "rgba(255, 255, 255, 0.8)" : "#000"};
+  color: ${({ dayTime }) => (dayTime ? "#000" : "#FFF")};
 
   // iPhone Screen
 

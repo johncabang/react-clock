@@ -13,7 +13,7 @@ import {
   MainContainer,
 } from "./MainElements";
 
-// import sunIcon from "./../../assets/desktop/icon-sun.svg";
+import sunIcon from "./../../assets/desktop/icon-sun.svg";
 import moonIcon from "./../../assets/desktop/icon-moon.svg";
 import Button from "../Button";
 import Quote from "../Quote";
@@ -25,17 +25,23 @@ const Main = ({
   abbreviation,
   city,
   countryCode,
+  greeting,
+  dayTime,
 }) => {
   return (
-    <MainContainer isOpen={isOpen}>
+    <MainContainer isOpen={isOpen} dayTime={dayTime}>
       <Quote isOpen={isOpen} />
       <ClockContainer>
         <ClockWrapper>
           <ClockGreetingContainer>
             <ClockGreetingIcon>
-              <img src={moonIcon} alt="sun" />
+              {dayTime ? (
+                <img src={sunIcon} alt="sun" />
+              ) : (
+                <img src={moonIcon} alt="moon" />
+              )}
             </ClockGreetingIcon>
-            <ClockGreeting>GOOD EVENING, IT’S CURRENTLY</ClockGreeting>
+            <ClockGreeting>{greeting}, IT'S CURRENTLY</ClockGreeting>
           </ClockGreetingContainer>
           <ClockTimeContainer>
             <ClockTime>

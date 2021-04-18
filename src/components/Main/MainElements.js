@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 // import dayBg from "./../../assets/desktop/bg-image-daytime.jpg";
-import nightBg from "./../../assets/desktop/bg-image-nighttime.jpg";
+// import nightBg from "./../../assets/desktop/bg-image-nighttime.jpg";
 
 export const MainContainer = styled.div`
   transition: 0.5s ease-in-out;
@@ -11,10 +11,7 @@ export const MainContainer = styled.div`
   flex-direction: column;
   height: ${({ isOpen }) => (isOpen ? "50vh" : "100vh")};
   color: #fff;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(${nightBg});
-  background-position: center top;
-  background-size: cover;
+
   padding: 0 10rem;
   overflow: hidden;
 
@@ -22,6 +19,7 @@ export const MainContainer = styled.div`
 
   @media screen and (max-width: 768px) {
     transition: 0.8s all ease;
+
     justify-content: space-around;
     padding-left: 4rem;
   }
@@ -30,7 +28,7 @@ export const MainContainer = styled.div`
 
   @media screen and (max-width: 375px) {
     transition: 0.8s all ease;
-    height: ${({ isOpen }) => (isOpen ? "70vh" : "100vh")};
+    height: ${({ isOpen }) => (isOpen ? "65vh" : "100vh")};
     width: 100%;
     padding: 0 2rem;
   }
