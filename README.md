@@ -1,13 +1,11 @@
-## Frontend Mentor - Clock App Challenge
+## Frontend Mentor - Clock App Challenge <!-- omit in toc -->
 
 !["react-clock - desktop - nighttime"](https://github.com/johncabang/react-clock/blob/main/docs/react-clock-desktop-daytime-01.gif?raw=true)
 
 This is a solution to the [Clock app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/clock-app-LMFaxFwrM). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
-## Table of contents
+## Table of contents <!-- omit in toc -->
 
-- [Frontend Mentor - Clock App Challenge](#frontend-mentor---clock-app-challenge)
-- [Table of contents](#table-of-contents)
 - [Overview](#overview)
   - [The challenge](#the-challenge)
   - [Expected Behaviour](#expected-behaviour)
