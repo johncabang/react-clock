@@ -11,7 +11,6 @@ This is a solution to the [Clock app challenge on Frontend Mentor](https://www.f
   - [Expected Behaviour](#expected-behaviour)
   - [Built with](#built-with)
   - [APIs](#apis)
-  - [Screenshot](#screenshot)
   - [Preview](#preview)
 
 ## Overview
@@ -50,7 +49,7 @@ Users should be able to:
 - [IPstack API](https://ipstack.com/) to set the city and country underneath the time
 - [Programming Quotes API](https://programming-quotes-api.herokuapp.com/) to generate random programming quotes.
 
-### Screenshot
+<!-- ### Screenshot
 
 !["react-clock - desktop"](https://github.com/johncabang/react-clock/blob/main/docs/clock-desktop-nighttime.png?raw=true)
 
@@ -66,7 +65,7 @@ Mobile
 
 !["react-clock - mobile"](https://github.com/johncabang/react-clock/blob/main/docs/clock-mobile-nighttime.png?raw=true)
 
-!["react-clock - mobile - expand"](https://github.com/johncabang/react-clock/blob/main/docs/clock-mobile-nighttime-expand.png?raw=true)
+!["react-clock - mobile - expand"](https://github.com/johncabang/react-clock/blob/main/docs/clock-mobile-nighttime-expand.png?raw=true) -->
 
 ### Preview
 
