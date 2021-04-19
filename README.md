@@ -51,13 +51,11 @@ Users should be able to:
 - [IPstack API](https://ipstack.com/) to set the city and country underneath the time
 - [Programming Quotes API](https://programming-quotes-api.herokuapp.com/) to generate random programming quotes.
 
-!["react-clock - mobile - expand"](https://github.com/johncabang/react-clock/blob/main/docs/clock-mobile-nighttime-expand.png?raw=true)
-
 ### Preview
 
 Desktop
 
-!["react-clock - desktop - nighttime"](https://github.com/johncabang/react-clock/blob/main/docs/clock-desktop-nighttime-01.gif?raw=true)
+!["react-clock - desktop - nighttime"](https://github.com/johncabang/react-clock/blob/main/docs/react-clock-desktop-nighttime-01.gif?raw=true)
 
 Tablet
 
