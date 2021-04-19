@@ -1,4 +1,21 @@
-## React-Clock **(work in progress)**
+## Frontend Mentor - Clock App Challenge
+
+!["react-clock - desktop - nighttime"](https://github.com/johncabang/react-clock/blob/main/docs/clock-desktop-nighttime.png?raw=true)
+
+This is a solution to the [Clock app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/clock-app-LMFaxFwrM). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
+
+## Table of contents
+
+- [Frontend Mentor - Clock App Challenge](#frontend-mentor---clock-app-challenge)
+- [Table of contents](#table-of-contents)
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Expected Behaviour](#expected-behaviour)
+  - [Built with](#built-with)
+  - [APIs](#apis)
+  - [Preview](#preview)
+
+## Overview
 
 ### The challenge
 
@@ -36,4 +53,16 @@ Users should be able to:
 
 ### Preview
 
-![Design preview for the Clock app coding challenge](./public/../src/assets/markdown/preview.jpg)
+Desktop
+
+!["react-clock - desktop - nighttime"](https://github.com/johncabang/react-clock/blob/main/docs/clock-desktop-nighttime-expand.png?raw=true)
+
+<!-- !["react-clock - desktop - nighttime"](https://github.com/johncabang/react-clock/blob/main/docs/clock-desktop-nighttime-01.gif?raw=true)
+
+Tablet
+
+<img src="https://github.com/johncabang/react-clock/blob/main/docs/clock-tablet-daytime.gif?raw=true" height="450"> <img src="https://github.com/johncabang/react-clock/blob/main/docs/clock-tablet-nighttime.gif?raw=true" height="450">
+
+Mobile
+
+<img src="https://github.com/johncabang/react-clock/blob/main/docs/clock-mobile-daytime.gif?raw=true" height="600"> <img src="https://github.com/johncabang/react-clock/blob/main/docs/clock-mobile-nighttime.gif?raw=true" height="600"> -->
