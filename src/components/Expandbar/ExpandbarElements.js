@@ -13,7 +13,7 @@ export const ExpandbarContainer = styled.aside`
 
   // iPhone Screen
 
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 414px) {
     transition: 0.8s all ease;
     height: 35vh;
   }
@@ -33,7 +33,7 @@ export const ExpandbarWrapper = styled.div`
 
   // iPhone Screen
 
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 414px) {
     transition: 0.8s all ease;
     flex-direction: column;
   }
@@ -47,7 +47,7 @@ export const ExpandbarTextContainer = styled.div`
 
   // iPhone Screen
 
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 414px) {
     transition: 0.8s all ease;
     width: 100%;
   }
@@ -60,7 +60,7 @@ export const ExpandbarTitle = styled.h6`
 
   // iPhone Screen
 
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 414px) {
     transition: 0.8s all ease;
     font-size: 10px;
     letter-spacing: 2px;
@@ -73,7 +73,7 @@ export const ExpandbarBody = styled.h2`
 
   // iPhone Screen
 
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 414px) {
     transition: 0.8s all ease;
     font-size: 20px;
   }
@@ -87,7 +87,7 @@ export const ExpandbarTextWrapper = styled.div`
 
   // iPhone Screen
 
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 414px) {
     transition: 0.8s all ease;
     flex-direction: row;
     align-items: center;

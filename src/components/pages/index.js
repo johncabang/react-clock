@@ -8,12 +8,6 @@ import { Content } from "./ContentElements";
 const ACCESS_KEY = process.env.REACT_APP_ACCESS_KEY;
 
 const Home = () => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggle = () => {
-    setIsOpen(!isOpen);
-  };
-
   const [currentTime, setCurrentTime] = useState("");
   const [abbreviation, setAbbreviation] = useState("");
   const [currentTimezone, setCurrentTimezone] = useState("");
@@ -23,10 +17,19 @@ const Home = () => {
   const [city, setCity] = useState("");
   const [countryCode, setCountryCode] = useState("");
 
+  // Expand more info component
+
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggle = () => {
+    setIsOpen(!isOpen);
+  };
+
   // Check time of day for GREETING
 
   const [greeting, setGreeting] = useState("");
   const [dayTime, setDayTime] = useState(null);
+
   const checkGreeting = (timeobj) => {
     const currentHours = new Date(timeobj).getHours();
     if (currentHours >= 5 && currentHours < 12) {
@@ -72,7 +75,7 @@ const Home = () => {
       });
   };
 
-  // TODOS - FIX missing dependency warning
+  // TODOS - FIX MISSING DEPENDENCY WARNING (CONSOLE)
 
   useEffect(() => {
     getTime();
@@ -84,20 +87,20 @@ const Home = () => {
         isOpen={isOpen}
         toggle={toggle}
         currentTimezone={currentTimezone}
-        dayOfYear={dayOfYear}
         dayOfWeek={dayOfWeek}
-        weekNumber={weekNumber}
+        dayOfYear={dayOfYear}
         dayTime={dayTime}
+        weekNumber={weekNumber}
       />
       <Main
         isOpen={isOpen}
         toggle={toggle}
-        currentTime={currentTime}
         abbreviation={abbreviation}
         city={city}
         countryCode={countryCode}
-        greeting={greeting}
+        currentTime={currentTime}
         dayTime={dayTime}
+        greeting={greeting}
       />
     </Content>
   );

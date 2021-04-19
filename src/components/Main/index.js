@@ -21,12 +21,12 @@ import Quote from "../Quote";
 const Main = ({
   isOpen,
   toggle,
-  currentTime,
   abbreviation,
   city,
   countryCode,
-  greeting,
+  currentTime,
   dayTime,
+  greeting,
 }) => {
   return (
     <MainContainer isOpen={isOpen} dayTime={dayTime}>

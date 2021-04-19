@@ -1,8 +1,5 @@
 import styled from "styled-components";
 
-// import dayBg from "./../../assets/desktop/bg-image-daytime.jpg";
-// import nightBg from "./../../assets/desktop/bg-image-nighttime.jpg";
-
 export const MainContainer = styled.div`
   transition: 0.5s ease-in-out;
 
@@ -11,7 +8,6 @@ export const MainContainer = styled.div`
   flex-direction: column;
   height: ${({ isOpen }) => (isOpen ? "50vh" : "100vh")};
   color: #fff;
-
   padding: 0 10rem;
   overflow: hidden;
 
@@ -19,14 +15,13 @@ export const MainContainer = styled.div`
 
   @media screen and (max-width: 768px) {
     transition: 0.8s all ease;
-
     justify-content: space-around;
     padding-left: 4rem;
   }
 
   // iPhone Screen
 
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 414px) {
     transition: 0.8s all ease;
     height: ${({ isOpen }) => (isOpen ? "65vh" : "100vh")};
     width: 100%;
@@ -73,7 +68,7 @@ export const ClockGreeting = styled.h4`
 
   // iPhone Screen
 
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 414px) {
     transition: 0.8s all ease;
     font-size: 15px;
     letter-spacing: 3px;
@@ -93,7 +88,7 @@ export const ClockTime = styled.h1`
 
   // iPhone Screen
 
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 414px) {
     transition: 0.8s all ease;
     font-size: 100px;
     letter-spacing: -2.5px;
@@ -107,7 +102,7 @@ export const ClockTimeZone = styled.h4`
 
   // iPhone Screen
 
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 414px) {
     transition: 0.8s all ease;
     font-size: 15px;
     padding: 0 0 1.2rem 1rem;
@@ -121,7 +116,7 @@ export const ClockLocation = styled.h3`
 
   // iPhone Screen
 
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 414px) {
     transition: 0.8s all ease;
     font-size: 15px;
     letter-spacing: 3px;
