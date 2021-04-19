@@ -17,7 +17,7 @@ const Home = () => {
   const [city, setCity] = useState("");
   const [countryCode, setCountryCode] = useState("");
 
-  // Expand more info component
+  // Expand More Info Component
 
   const [isOpen, setIsOpen] = useState(false);
 
@@ -25,7 +25,7 @@ const Home = () => {
     setIsOpen(!isOpen);
   };
 
-  // Check time of day for GREETING
+  // Check Time of Day for GREETING
 
   const [greeting, setGreeting] = useState("");
   const [dayTime, setDayTime] = useState(null);
@@ -45,39 +45,32 @@ const Home = () => {
 
   // API Calls to worldtimeapi & ipstack
 
-  const getTime = async () => {
-    await Axios.get("https://worldtimeapi.org/api/ip/")
-      .then((response) => {
-        console.log(response);
-        setCurrentTime(response.data.datetime);
-        setAbbreviation(response.data.abbreviation);
-        setCurrentTimezone(response.data.timezone);
-        setDayOfYear(response.data.day_of_year);
-        setDayOfWeek(response.data.day_of_week);
-        setWeekNumber(response.data.week_number);
-        checkGreeting(response.data.datetime);
-        console.log(greeting);
-        console.log(dayTime);
-
-        Axios.get(
-          `http://api.ipstack.com/${response.data.client_ip}?access_key=${ACCESS_KEY}`
-        )
-          .then((response) => {
-            setCity(response.data.city.toUpperCase());
-            setCountryCode(response.data.country_code);
-          })
-          .catch((err) => {
-            console.log("Location API Error", err);
-          });
-      })
-      .catch((err) => {
-        console.log("Current Time API Error", err);
-      });
-  };
-
-  // TODOS - FIX MISSING DEPENDENCY WARNING (CONSOLE)
-
   useEffect(() => {
+    async function getTime() {
+      await Axios.get("https://worldtimeapi.org/api/ip/")
+        .then((response) => {
+          setCurrentTime(response.data.datetime);
+          setAbbreviation(response.data.abbreviation);
+          setCurrentTimezone(response.data.timezone);
+          setDayOfYear(response.data.day_of_year);
+          setDayOfWeek(response.data.day_of_week);
+          setWeekNumber(response.data.week_number);
+          checkGreeting(response.data.datetime);
+          Axios.get(
+            `http://api.ipstack.com/${response.data.client_ip}?access_key=${ACCESS_KEY}`
+          )
+            .then((response) => {
+              setCity(response.data.city.toUpperCase());
+              setCountryCode(response.data.country_code);
+            })
+            .catch((err) => {
+              console.log("Location API Error", err);
+            });
+        })
+        .catch((err) => {
+          console.log("Current Time API Error", err);
+        });
+    }
     getTime();
   }, []);
 

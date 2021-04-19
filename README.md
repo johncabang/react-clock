@@ -1,4 +1,20 @@
-## React-Clock **(work in progress)**
+## Frontend Mentor - Clock App Challenge
+
+This is a solution to the [Clock app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/clock-app-LMFaxFwrM). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
+
+## Table of contents
+
+- [Frontend Mentor - Clock App Challenge](#frontend-mentor---clock-app-challenge)
+- [Table of contents](#table-of-contents)
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Expected Behaviour](#expected-behaviour)
+  - [Built with](#built-with)
+  - [APIs](#apis)
+  - [Screenshot](#screenshot)
+  - [Preview](#preview)
+
+## Overview
 
 ### The challenge
 
@@ -34,6 +50,34 @@ Users should be able to:
 - [IPstack API](https://ipstack.com/) to set the city and country underneath the time
 - [Programming Quotes API](https://programming-quotes-api.herokuapp.com/) to generate random programming quotes.
 
+### Screenshot
+
+!["react-clock - desktop"](https://github.com/johncabang/react-clock/blob/main/docs/clock-desktop-nighttime.png?raw=true)
+
+!["react-clock - desktop - expand"](https://github.com/johncabang/react-clock/blob/main/docs/clock-desktop-nighttime-expand.png?raw=true)
+
+Tablet
+
+!["react-clock - tablet"](https://github.com/johncabang/react-clock/blob/main/docs/clock-tablet-nighttime.png?raw=true)
+
+!["react-clock - tablet - expand"](https://github.com/johncabang/react-clock/blob/main/docs/clock-tablet-nighttime-expand.png?raw=true)
+
+Mobile
+
+!["react-clock - mobile"](https://github.com/johncabang/react-clock/blob/main/docs/clock-mobile-nighttime.png?raw=true)
+
+!["react-clock - mobile - expand"](https://github.com/johncabang/react-clock/blob/main/docs/clock-mobile-nighttime-expand.png?raw=true)
+
 ### Preview
 
-![Design preview for the Clock app coding challenge](./public/../src/assets/markdown/preview.jpg)
+Desktop
+
+!["react-clock - desktop"](https://github.com/johncabang/react-clock/blob/main/docs/react-clock-desktop-nighttime.gif?raw=true)
+
+Tablet
+
+!["react-clock - tablet"](https://github.com/johncabang/react-clock/blob/main/docs/react-clock-tablet-nighttime.gif?raw=true)
+
+Mobile
+
+!["react-clock - mobile"](https://github.com/johncabang/react-clock/blob/main/docs/react-clock-mobile-nighttime.gif?raw=true)
