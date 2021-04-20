@@ -57,8 +57,8 @@ Desktop
 
 Tablet
 
-<img src="https://github.com/johncabang/react-clock/blob/main/docs/react-clock-tablet-daytime-01.gif?raw=true" height="500"> <img src="https://github.com/johncabang/react-clock/blob/main/docs/react-clock-tablet-nighttime-01.gif?raw=true" height="500">
+<center><img src="https://github.com/johncabang/react-clock/blob/main/docs/react-clock-tablet-daytime-01.gif?raw=true" height="550"> <img src="https://github.com/johncabang/react-clock/blob/main/docs/react-clock-tablet-nighttime-01.gif?raw=true" height="550"></center>
 
 Mobile
 
-<img src="https://github.com/johncabang/react-clock/blob/main/docs/react-clock-mobile-daytime-01.gif?raw=true" height="600"> <img src="https://github.com/johncabang/react-clock/blob/main/docs/react-clock-mobile-nighttime-01.gif?raw=true" height="600">
+<center><img src="https://github.com/johncabang/react-clock/blob/main/docs/react-clock-mobile-daytime-01.gif?raw=true" height="600"> <img src="https://github.com/johncabang/react-clock/blob/main/docs/react-clock-mobile-nighttime-01.gif?raw=true" height="600"></center>
