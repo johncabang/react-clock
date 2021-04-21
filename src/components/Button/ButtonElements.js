@@ -6,7 +6,7 @@ export const ClockButtonContainer = styled.nav`
   align-items: flex-end;
 `;
 
-export const ClockButtonLink = styled.button`
+export const ClockButtonLink = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;

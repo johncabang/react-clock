@@ -35,7 +35,7 @@ const ExpandBar = ({
             <ExpandbarBody>{dayOfWeek}</ExpandbarBody>
           </ExpandbarTextWrapper>
           <ExpandbarTextWrapper>
-            <ExpandbarTitle> WEEK NUMBER</ExpandbarTitle>
+            <ExpandbarTitle>WEEK NUMBER</ExpandbarTitle>
             <ExpandbarBody>{weekNumber}</ExpandbarBody>
           </ExpandbarTextWrapper>
         </ExpandbarTextContainer>

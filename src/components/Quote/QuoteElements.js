@@ -53,9 +53,7 @@ export const QuoteRefreshIconWrapper = styled.div`
   padding-left: 2rem;
 `;
 
-export const QuoteRefreshIcon = styled.button`
+export const QuoteRefreshIcon = styled.div`
   background-color: transparent;
   cursor: pointer;
-  border: none;
-  outline: none;
 `;
