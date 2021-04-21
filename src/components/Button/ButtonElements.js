@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const ClockButtonContainer = styled.nav`
+export const ClockButtonContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
@@ -11,14 +11,11 @@ export const ClockButtonLink = styled.div`
   align-items: center;
   justify-content: space-between;
   background-color: #fff;
-  border: none;
   border-radius: 25px;
   color: #303030;
   cursor: pointer;
   font-size: 16px;
-  outline: none;
   padding: 5px 5px 5px 20px;
-  text-decoration: none;
   white-space: nowrap;
   letter-spacing: 5px;
   font-weight: bold;
