@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const QuoteContainer = styled.div`
   display: flex;
-  width: 500px;
   margin-bottom: 10rem;
 
   // iPhone Screen
@@ -11,7 +10,6 @@ export const QuoteContainer = styled.div`
     transition: 0.8s all ease;
     font-size: 15px;
     letter-spacing: 0px;
-    width: auto;
   }
 `;
 
@@ -25,12 +23,9 @@ export const QuoteBody = styled.p`
   font-weight: 100;
   margin-bottom: 13px;
 
-  // iPhone Screen
-
-  @media screen and (max-width: 414px) {
+  @media screen and (max-width: 320px) {
     transition: 0.8s all ease;
-    font-size: 15px;
-    letter-spacing: 0px;
+    font-size: 13px;
   }
 `;
 
@@ -44,6 +39,10 @@ export const QuoteAuthor = styled.p`
     transition: 0.8s all ease;
     font-size: 15px;
     letter-spacing: 0px;
+  }
+
+  @media screen and (max-width: 320px) {
+    font-size: 14px;
   }
 `;
 

@@ -11,6 +11,12 @@ export const MainContainer = styled.div`
   padding: 0 10rem;
   overflow: hidden;
 
+  @media screen and (max-width: 520px) {
+    transition: 0.8s all ease;
+    padding: 0 5rem;
+    height: ${({ isOpen }) => (isOpen ? "65vh" : "100vh")};
+  }
+
   // iPad Screen
 
   @media screen and (max-width: 768px) {
@@ -26,6 +32,11 @@ export const MainContainer = styled.div`
     height: ${({ isOpen }) => (isOpen ? "65vh" : "100vh")};
     width: 100%;
     padding: 0 2rem;
+  }
+
+  @media screen and (max-width: 320px) {
+    transition: 0.8s all ease;
+    padding: 2rem 2rem;
   }
 `;
 
@@ -86,6 +97,12 @@ export const ClockTime = styled.h1`
   height: auto;
   letter-spacing: -5px;
 
+  @media screen and (max-width: 520px) {
+    transition: 0.8s all ease;
+    font-size: 150px;
+    letter-spacing: 3px;
+  }
+
   // iPhone Screen
 
   @media screen and (max-width: 414px) {
@@ -100,12 +117,22 @@ export const ClockTimeZone = styled.h4`
   font-weight: lighter;
   padding: 0 0 2rem 1rem;
 
+  @media screen and (max-width: 520px) {
+    transition: 0.8s all ease;
+    font-size: 20px;
+    padding-left: 0;
+  }
+
   // iPhone Screen
 
   @media screen and (max-width: 414px) {
-    transition: 0.8s all ease;
     font-size: 15px;
     padding: 0 0 1.2rem 1rem;
+  }
+
+  @media screen and (max-width: 320px) {
+    font-size: 12px;
+    padding: 0 1rem 1rem 0.5rem;
   }
 `;
 
