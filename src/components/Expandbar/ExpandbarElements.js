@@ -58,9 +58,14 @@ export const ExpandbarTitle = styled.h6`
   letter-spacing: 3px;
   font-weight: 100;
 
+  @media screen and (max-width: 650px) {
+    transition: 0.8s all ease;
+    font-size: 45px;
+  }
+
   // iPhone Screen
 
-  @media screen and (max-width: 520px) {
+  @media screen and (max-width: 700px) {
     transition: 0.8s all ease;
     font-size: 10px;
     letter-spacing: 2px;
@@ -70,6 +75,11 @@ export const ExpandbarTitle = styled.h6`
 export const ExpandbarBody = styled.h2`
   font-size: 56px;
   font-weight: bold;
+
+  @media screen and (max-width: 650px) {
+    transition: 0.8s all ease;
+    font-size: 45px;
+  }
 
   // iPhone Screen
 

@@ -46,7 +46,7 @@ export const ClockContainer = styled.div`
 
   // iPad Screen
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1025px) {
     transition: 0.8s all ease;
     flex-direction: column;
   }
@@ -58,7 +58,7 @@ export const ClockWrapper = styled.div`
 
   // iPad Screen
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1025px) {
     transition: 0.8s all ease;
     padding-bottom: 5rem;
   }
@@ -105,7 +105,7 @@ export const ClockTime = styled.h1`
 
   // iPhone Screen
 
-  @media screen and (max-width: 414px) {
+  @media screen and (max-width: 700px) {
     transition: 0.8s all ease;
     font-size: 100px;
     letter-spacing: -2.5px;
