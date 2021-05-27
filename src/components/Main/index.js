@@ -49,9 +49,13 @@ const Main = ({
             </ClockTime>
             <ClockTimeZone>{abbreviation}</ClockTimeZone>
           </ClockTimeContainer>
-          <ClockLocation>
-            IN {city}, {countryCode}
-          </ClockLocation>
+          {!countryCode ? (
+            ""
+          ) : (
+            <ClockLocation>
+              IN {city}, {countryCode}
+            </ClockLocation>
+          )}
         </ClockWrapper>
         <Button toggle={toggle} isOpen={isOpen} />
       </ClockContainer>
