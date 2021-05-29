@@ -127,10 +127,14 @@ export const ClockTimeZone = styled.h4`
   font-weight: lighter;
   padding: 0 0 2rem 1rem;
 
-  @media screen and (max-width: 520px) {
+  @media screen and (max-width: 1020px) {
     transition: 0.8s all ease;
+    font-size: 30px;
+  }
+
+  @media screen and (max-width: 700px) {
     font-size: 20px;
-    padding-left: 0;
+    padding-left: 1rem;
   }
 
   // iPhone Screen
