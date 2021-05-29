@@ -105,7 +105,7 @@ export const ClockTime = styled.h1`
 
   @media screen and (max-width: 1020px) {
     transition: 0.8s all ease;
-    font-size: 100px;
+    font-size: 150px;
     letter-spacing: 3px;
   }
 
