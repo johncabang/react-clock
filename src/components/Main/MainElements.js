@@ -58,7 +58,7 @@ export const ClockWrapper = styled.div`
 
   // iPad Screen
 
-  @media screen and (max-width: 1025px) {
+  @media screen and (max-width: 1020px) {
     transition: 0.8s all ease;
     padding-bottom: 5rem;
   }
@@ -76,6 +76,12 @@ export const ClockGreeting = styled.h4`
   font-size: 20px;
   font-weight: 100;
   letter-spacing: 4px;
+
+  @media screen and (max-width: 1020px) {
+    transition: 0.8s all ease;
+    font-size: 15px;
+    letter-spacing: 3px;
+  }
 
   // iPhone Screen
 
@@ -97,10 +103,14 @@ export const ClockTime = styled.h1`
   height: auto;
   letter-spacing: -5px;
 
-  @media screen and (max-width: 520px) {
+  @media screen and (max-width: 1020px) {
     transition: 0.8s all ease;
-    font-size: 150px;
+    font-size: 100px;
     letter-spacing: 3px;
+  }
+
+  @media screen and (max-width: 520px) {
+    font-size: 150px;
   }
 
   // iPhone Screen
@@ -140,6 +150,12 @@ export const ClockLocation = styled.h3`
   font-size: 24px;
   font-weight: bold;
   letter-spacing: 4.8px;
+
+  @media screen and (max-width: 1020px) {
+    transition: 0.8s all ease;
+    font-size: 20px;
+    letter-spacing: 3px;
+  }
 
   // iPhone Screen
 

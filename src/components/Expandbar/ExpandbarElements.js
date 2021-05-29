@@ -76,7 +76,7 @@ export const ExpandbarBody = styled.h2`
   font-size: 56px;
   font-weight: bold;
 
-  @media screen and (max-width: 650px) {
+  @media screen and (max-width: 1020px) {
     transition: 0.8s all ease;
     font-size: 45px;
   }
