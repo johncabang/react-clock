@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
-import Expandbar from "../Expandbar";
-import Main from "../Main";
+import Expandbar from "../components/Expandbar";
+import Main from "../components/Main";
 
 import Axios from "axios";
 
 import { Content } from "./ContentElements";
-import Loading from "../Loading";
+import Loading from "../components/Loading";
 
 const ACCESS_KEY = process.env.REACT_APP_ACCESS_KEY;
 

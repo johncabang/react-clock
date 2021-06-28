@@ -1,7 +1,9 @@
 import styled from "styled-components";
 
-import dayBg from "./../../assets/desktop/bg-image-daytime.jpg";
-import nightBg from "./../../assets/desktop/bg-image-nighttime.jpg";
+// import dayBg from "./../../assets/desktop/bg-image-daytime.jpg";
+// import nightBg from "./../../assets/desktop/bg-image-nighttime.jpg";
+import dayBg from "../assets/desktop/bg-image-daytime.jpg";
+import nightBg from "../assets/desktop/bg-image-nighttime.jpg";
 
 export const Content = styled.div`
   background: ${({ dayTime }) =>
