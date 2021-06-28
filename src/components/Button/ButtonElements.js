@@ -27,5 +27,4 @@ export const ClockButtonCircle = styled.div`
   justify-content: center;
   width: 30px;
   height: 30px;
-  }
 `;
