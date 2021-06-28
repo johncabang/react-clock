@@ -1,12 +1,12 @@
 import styled from "styled-components";
 
-export const ClockButtonContainer = styled.div`
+export const StyledContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
 `;
 
-export const ClockButtonLink = styled.div`
+export const StyledLink = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -22,7 +22,7 @@ export const ClockButtonLink = styled.div`
   width: 140px;
 `;
 
-export const ClockButtonCircle = styled.div`
+export const StyledCircle = styled.div`
   display: flex;
   justify-content: center;
   width: 30px;

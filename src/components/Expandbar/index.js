@@ -1,10 +1,10 @@
 import {
-  ExpandbarContainer,
-  ExpandbarTextContainer,
-  ExpandbarBody,
-  ExpandbarWrapper,
-  ExpandbarTitle,
-  ExpandbarTextWrapper,
+  StyledContainer,
+  StyledTextContainer,
+  StyledBody,
+  StyledWrapper,
+  StyledTitle,
+  StyledTextWrapper,
 } from "./ExpandbarElements";
 
 const ExpandBar = ({
@@ -17,30 +17,30 @@ const ExpandBar = ({
   dayTime,
 }) => {
   return (
-    <ExpandbarContainer isOpen={isOpen} onClick={toggle}>
-      <ExpandbarWrapper dayTime={dayTime}>
-        <ExpandbarTextContainer>
-          <ExpandbarTextWrapper>
-            <ExpandbarTitle>CURRENT TIMEZONE</ExpandbarTitle>
-            <ExpandbarBody>{currentTimezone}</ExpandbarBody>
-          </ExpandbarTextWrapper>
-          <ExpandbarTextWrapper>
-            <ExpandbarTitle>DAY OF THE YEAR</ExpandbarTitle>
-            <ExpandbarBody>{dayOfYear}</ExpandbarBody>
-          </ExpandbarTextWrapper>
-        </ExpandbarTextContainer>
-        <ExpandbarTextContainer>
-          <ExpandbarTextWrapper>
-            <ExpandbarTitle>DAY OF THE WEEK</ExpandbarTitle>
-            <ExpandbarBody>{dayOfWeek}</ExpandbarBody>
-          </ExpandbarTextWrapper>
-          <ExpandbarTextWrapper>
-            <ExpandbarTitle>WEEK NUMBER</ExpandbarTitle>
-            <ExpandbarBody>{weekNumber}</ExpandbarBody>
-          </ExpandbarTextWrapper>
-        </ExpandbarTextContainer>
-      </ExpandbarWrapper>
-    </ExpandbarContainer>
+    <StyledContainer isOpen={isOpen} onClick={toggle}>
+      <StyledWrapper dayTime={dayTime}>
+        <StyledTextContainer>
+          <StyledTextWrapper>
+            <StyledTitle>CURRENT TIMEZONE</StyledTitle>
+            <StyledBody>{currentTimezone}</StyledBody>
+          </StyledTextWrapper>
+          <StyledTextWrapper>
+            <StyledTitle>DAY OF THE YEAR</StyledTitle>
+            <StyledBody>{dayOfYear}</StyledBody>
+          </StyledTextWrapper>
+        </StyledTextContainer>
+        <StyledTextContainer>
+          <StyledTextWrapper>
+            <StyledTitle>DAY OF THE WEEK</StyledTitle>
+            <StyledBody>{dayOfWeek}</StyledBody>
+          </StyledTextWrapper>
+          <StyledTextWrapper>
+            <StyledTitle>WEEK NUMBER</StyledTitle>
+            <StyledBody>{weekNumber}</StyledBody>
+          </StyledTextWrapper>
+        </StyledTextContainer>
+      </StyledWrapper>
+    </StyledContainer>
   );
 };
 

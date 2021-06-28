@@ -1,15 +1,15 @@
 import Moment from "react-moment";
 
 import {
-  ClockContainer,
-  ClockGreeting,
-  ClockGreetingContainer,
-  ClockGreetingIcon,
-  ClockLocation,
-  ClockTime,
-  ClockTimeContainer,
-  ClockTimeZone,
-  ClockWrapper,
+  StyledContainer,
+  StyledGreeting,
+  StyledGreetingContainer,
+  StyledGreetingIcon,
+  StyledLocation,
+  StyledTime,
+  StyledTimeContainer,
+  StyledTimeZone,
+  StyledWrapper,
   MainContainer,
 } from "./MainElements";
 
@@ -31,34 +31,34 @@ const Main = ({
   return (
     <MainContainer isOpen={isOpen} dayTime={dayTime}>
       <Quote isOpen={isOpen} />
-      <ClockContainer>
-        <ClockWrapper>
-          <ClockGreetingContainer>
-            <ClockGreetingIcon>
+      <StyledContainer>
+        <StyledWrapper>
+          <StyledGreetingContainer>
+            <StyledGreetingIcon>
               {dayTime ? (
                 <img src={sunIcon} alt="sun" />
               ) : (
                 <img src={moonIcon} alt="moon" />
               )}
-            </ClockGreetingIcon>
-            <ClockGreeting>{greeting}, IT'S CURRENTLY</ClockGreeting>
-          </ClockGreetingContainer>
-          <ClockTimeContainer>
-            <ClockTime>
+            </StyledGreetingIcon>
+            <StyledGreeting>{greeting}, IT'S CURRENTLY</StyledGreeting>
+          </StyledGreetingContainer>
+          <StyledTimeContainer>
+            <StyledTime>
               <Moment format="hh:mm">{currentTime}</Moment>
-            </ClockTime>
-            <ClockTimeZone>{abbreviation}</ClockTimeZone>
-          </ClockTimeContainer>
+            </StyledTime>
+            <StyledTimeZone>{abbreviation}</StyledTimeZone>
+          </StyledTimeContainer>
           {!countryCode ? (
             ""
           ) : (
-            <ClockLocation>
+            <StyledLocation>
               IN {city}, {countryCode}
-            </ClockLocation>
+            </StyledLocation>
           )}
-        </ClockWrapper>
+        </StyledWrapper>
         <Button toggle={toggle} isOpen={isOpen} />
-      </ClockContainer>
+      </StyledContainer>
     </MainContainer>
   );
 };

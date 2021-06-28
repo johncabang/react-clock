@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const QuoteContainer = styled.div`
+export const StyledContainer = styled.div`
   display: flex;
   margin-bottom: 10rem;
 
@@ -13,12 +13,12 @@ export const QuoteContainer = styled.div`
   }
 `;
 
-export const QuoteWrapper = styled.div`
+export const StyledWrapper = styled.div`
   display: flex;
   flex-direction: column;
 `;
 
-export const QuoteBody = styled.p`
+export const StyledBody = styled.p`
   font-size: 18px;
   font-weight: 100;
   margin-bottom: 13px;
@@ -29,7 +29,7 @@ export const QuoteBody = styled.p`
   }
 `;
 
-export const QuoteAuthor = styled.p`
+export const StyledAuthor = styled.p`
   font-size: 18px;
   font-weight: bold;
 
@@ -46,13 +46,13 @@ export const QuoteAuthor = styled.p`
   }
 `;
 
-export const QuoteRefreshIconWrapper = styled.div`
+export const StyledRefreshIconWrapper = styled.div`
   background-color: transparent;
   height: auto;
   padding-left: 2rem;
 `;
 
-export const QuoteRefreshIcon = styled.div`
+export const StyledRefreshIcon = styled.div`
   background-color: transparent;
   cursor: pointer;
 `;

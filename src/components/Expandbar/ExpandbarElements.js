@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const ExpandbarContainer = styled.aside`
+export const StyledContainer = styled.aside`
   display: flex;
   justify-content: center;
   position: fixed;
@@ -19,7 +19,7 @@ export const ExpandbarContainer = styled.aside`
   }
 `;
 
-export const ExpandbarWrapper = styled.div`
+export const StyledWrapper = styled.div`
   background: #000;
   color: #fff;
   display: flex;
@@ -39,7 +39,7 @@ export const ExpandbarWrapper = styled.div`
   }
 `;
 
-export const ExpandbarTextContainer = styled.div`
+export const StyledTextContainer = styled.div`
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -53,7 +53,7 @@ export const ExpandbarTextContainer = styled.div`
   }
 `;
 
-export const ExpandbarTitle = styled.h6`
+export const StyledTitle = styled.h6`
   font-size: 15px;
   letter-spacing: 3px;
   font-weight: 100;
@@ -72,7 +72,7 @@ export const ExpandbarTitle = styled.h6`
   }
 `;
 
-export const ExpandbarBody = styled.h2`
+export const StyledBody = styled.h2`
   font-size: 56px;
   font-weight: bold;
 
@@ -89,7 +89,7 @@ export const ExpandbarBody = styled.h2`
   }
 `;
 
-export const ExpandbarTextWrapper = styled.div`
+export const StyledTextWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;

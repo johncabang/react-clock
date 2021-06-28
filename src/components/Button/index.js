@@ -1,21 +1,17 @@
-import {
-  ClockButtonContainer,
-  ClockButtonCircle,
-  ClockButtonLink,
-} from "./ButtonElements";
+import { StyledContainer, StyledCircle, StyledLink } from "./ButtonElements";
 
 import arrow from "./../../assets/desktop/icon-arrow-up.svg";
 
 const Button = ({ toggle, isOpen }) => {
   return (
-    <ClockButtonContainer>
-      <ClockButtonLink onClick={toggle}>
+    <StyledContainer>
+      <StyledLink onClick={toggle}>
         {!isOpen ? "MORE" : "LESS"}
-        <ClockButtonCircle>
+        <StyledCircle>
           <img src={arrow} alt="arrow" />
-        </ClockButtonCircle>
-      </ClockButtonLink>
-    </ClockButtonContainer>
+        </StyledCircle>
+      </StyledLink>
+    </StyledContainer>
   );
 };
 

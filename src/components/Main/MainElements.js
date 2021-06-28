@@ -40,7 +40,7 @@ export const MainContainer = styled.div`
   }
 `;
 
-export const ClockContainer = styled.div`
+export const StyledContainer = styled.div`
   display: flex;
   justify-content: space-between;
 
@@ -52,7 +52,7 @@ export const ClockContainer = styled.div`
   }
 `;
 
-export const ClockWrapper = styled.div`
+export const StyledWrapper = styled.div`
   display: flex;
   flex-direction: column;
 
@@ -64,15 +64,15 @@ export const ClockWrapper = styled.div`
   }
 `;
 
-export const ClockGreetingContainer = styled.div`
+export const StyledGreetingContainer = styled.div`
   display: flex;
 `;
 
-export const ClockGreetingIcon = styled.div`
+export const StyledGreetingIcon = styled.div`
   margin-right: 1rem;
 `;
 
-export const ClockGreeting = styled.h4`
+export const StyledGreeting = styled.h4`
   font-size: 20px;
   font-weight: 100;
   letter-spacing: 4px;
@@ -92,12 +92,12 @@ export const ClockGreeting = styled.h4`
   }
 `;
 
-export const ClockTimeContainer = styled.div`
+export const StyledTimeContainer = styled.div`
   display: flex;
   align-items: flex-end;
 `;
 
-export const ClockTime = styled.h1`
+export const StyledTime = styled.h1`
   font-size: 200px;
   font-weight: bold;
   height: auto;
@@ -122,7 +122,7 @@ export const ClockTime = styled.h1`
   }
 `;
 
-export const ClockTimeZone = styled.h4`
+export const StyledTimeZone = styled.h4`
   font-size: 40px;
   font-weight: lighter;
   padding: 0 0 2rem 1rem;
@@ -150,7 +150,7 @@ export const ClockTimeZone = styled.h4`
   }
 `;
 
-export const ClockLocation = styled.h3`
+export const StyledLocation = styled.h3`
   font-size: 24px;
   font-weight: bold;
   letter-spacing: 4.8px;
