@@ -1,92 +1,111 @@
-import React, { useState, useEffect } from "react";
-import Expandbar from "../components/Expandbar";
-import Main from "../components/Main";
+import React, { useState, useEffect } from 'react'
+import Expandbar from '../components/Expandbar'
+import Main from '../components/Main'
 
-import Axios from "axios";
+import Axios from 'axios'
 
-import { Content } from "./ContentElements";
-import Loading from "../components/Loading";
+import { Content } from './ContentElements'
+import Loading from '../components/Loading'
 
-const ACCESS_KEY = process.env.REACT_APP_ACCESS_KEY;
+const ACCESS_KEY = process.env.REACT_APP_ACCESS_KEY
 
 const Home = () => {
-  const [currentTime, setCurrentTime] = useState("");
-  const [abbreviation, setAbbreviation] = useState("");
-  const [currentTimezone, setCurrentTimezone] = useState("");
-  const [dayOfYear, setDayOfYear] = useState("");
-  const [dayOfWeek, setDayOfWeek] = useState("");
-  const [weekNumber, setWeekNumber] = useState("");
-  const [city, setCity] = useState("");
-  const [countryCode, setCountryCode] = useState("");
+  const [currentTime, setCurrentTime] = useState('')
+  const [abbreviation, setAbbreviation] = useState('')
+  const [currentTimezone, setCurrentTimezone] = useState('')
+  const [dayOfYear, setDayOfYear] = useState('')
+  const [dayOfWeek, setDayOfWeek] = useState('')
+  const [weekNumber, setWeekNumber] = useState('')
+  const [city, setCity] = useState('')
+  const [countryCode, setCountryCode] = useState('')
 
-  const [isLoading, setIsLoading] = useState(true);
+  const [clientIP, setClientIP] = useState('')
+
+  const [isLoading, setIsLoading] = useState(true)
   // const [error, setError] = useState(null);
 
   // Expand More Info Component
 
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false)
 
   const toggle = () => {
-    setIsOpen(!isOpen);
-  };
+    setIsOpen(!isOpen)
+  }
 
   // Check Time of Day for GREETING
 
-  const [greeting, setGreeting] = useState("");
-  const [dayTime, setDayTime] = useState(false);
+  const [greeting, setGreeting] = useState('')
+  const [dayTime, setDayTime] = useState(false)
 
   const checkGreeting = (time) => {
-    const currentHours = new Date(time).getHours();
+    const currentHours = new Date(time).getHours()
     if (currentHours >= 5 && currentHours < 12) {
-      setGreeting("GOOD MORNING");
-      setDayTime(true);
+      setGreeting('GOOD MORNING')
+      setDayTime(true)
     } else if (currentHours >= 12 && currentHours < 18) {
-      setGreeting("GOOD AFTERNOON");
-      setDayTime(true);
+      setGreeting('GOOD AFTERNOON')
+      setDayTime(true)
     } else {
-      setGreeting("GOOD EVENING");
+      setGreeting('GOOD EVENING')
     }
-  };
+  }
 
   // API Calls to worldtimeapi & ipstack
 
-  useEffect(() => {
-    async function getTime() {
-      await Axios.get("https://worldtimeapi.org/api/ip/")
-        .then((response) => {
-          setCurrentTime(response.data.datetime);
-          setAbbreviation(response.data.abbreviation);
-          setCurrentTimezone(response.data.timezone);
-          setDayOfYear(response.data.day_of_year);
-          setDayOfWeek(response.data.day_of_week);
-          setWeekNumber(response.data.week_number);
-          checkGreeting(response.data.datetime);
+  const worldtimeapiURL = 'https://worldtimeapi.org/api/ip/'
+  const ipstackURL = `http://api.ipstack.com/${clientIP}?access_key=${ACCESS_KEY}`
 
-          setIsLoading(false);
-          // setError(null);
-          Axios.get(
-            `http://api.ipstack.com/${response.data.client_ip}?access_key=${ACCESS_KEY}`
-          )
-            .then((response) => {
-              setCity(response.data.city.toUpperCase());
-              setCountryCode(response.data.country_code);
-              setIsLoading(false);
-              // setError(null);
-            })
-            .catch((err) => {
-              console.log("Location API Error", err);
-              setIsLoading(false);
-              // setError(err.message);
-            });
-        })
-        .catch((err) => {
-          console.log("Current Time API Error", err);
-          setIsLoading(false);
-          // setError(err.message);
-        });
+  const getTime = async () => {
+    try {
+      const { data } = await Axios.get(worldtimeapiURL)
+      const {
+        datetime,
+        abbreviation,
+        timezone,
+        day_of_year,
+        day_of_week,
+        week_number,
+        client_ip,
+      } = data
+      setCurrentTime(datetime)
+      setAbbreviation(abbreviation)
+      setCurrentTimezone(timezone)
+      setDayOfYear(day_of_year)
+      setDayOfWeek(day_of_week)
+      setWeekNumber(week_number)
+      checkGreeting(datetime)
+      setClientIP(client_ip)
+      setIsLoading(false)
+      // setError(null);
+
+      getIp()
+    } catch (error) {
+      console.log('Current Time API Error', error)
+      setIsLoading(false)
+      // setError(error.message);
     }
-    getTime();
-  }, []);
+  }
+
+  const getIp = async () => {
+    try {
+      const { data } = await Axios.get(ipstackURL)
+      const { city, country_code } = data
+      setCity(city)
+      setCountryCode(country_code)
+      setIsLoading(false)
+      // setError(null);
+    } catch (error) {
+      console.log('Location API Error', error)
+      setIsLoading(false)
+      // setError(err.message);
+    }
+  }
+
+  useEffect(() => {
+    getTime()
+    // getIp()
+    // eslint-disable-next-line
+  }, [])
 
   return (
     <>
@@ -116,7 +135,7 @@ const Home = () => {
         </Content>
       )}
     </>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home
