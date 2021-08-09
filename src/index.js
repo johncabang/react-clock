@@ -1,13 +1,16 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import App from "./App";
+import React from 'react'
+import ReactDOM from 'react-dom'
+import App from './App'
 
-import GlobalStyles from "./styles/globalStyles";
+import { ClockProvider } from './context/ClockContext'
+import GlobalStyles from './styles/globalStyles'
 
 ReactDOM.render(
   <React.StrictMode>
     <GlobalStyles />
-    <App />
+    <ClockProvider>
+      <App />
+    </ClockProvider>
   </React.StrictMode>,
-  document.getElementById("root")
-);
+  document.getElementById('root'),
+)

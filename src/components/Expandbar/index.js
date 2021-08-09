@@ -1,3 +1,5 @@
+import { useContext } from 'react'
+import { ClockContext } from '../../context/ClockContext'
 import {
   StyledContainer,
   StyledTextContainer,
@@ -5,17 +7,19 @@ import {
   StyledWrapper,
   StyledTitle,
   StyledTextWrapper,
-} from "./ExpandbarElements";
+} from './ExpandbarElements'
 
-const ExpandBar = ({
-  isOpen,
-  toggle,
-  currentTimezone,
-  dayOfYear,
-  dayOfWeek,
-  weekNumber,
-  dayTime,
-}) => {
+const ExpandBar = () => {
+  const {
+    isOpen,
+    toggle,
+    dayTime,
+    currentTimezone,
+    dayOfYear,
+    dayOfWeek,
+    weekNumber,
+  } = useContext(ClockContext)
+
   return (
     <StyledContainer isOpen={isOpen} onClick={toggle}>
       <StyledWrapper dayTime={dayTime}>
@@ -41,7 +45,7 @@ const ExpandBar = ({
         </StyledTextContainer>
       </StyledWrapper>
     </StyledContainer>
-  );
-};
+  )
+}
 
-export default ExpandBar;
+export default ExpandBar

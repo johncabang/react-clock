@@ -1,4 +1,4 @@
-import Moment from "react-moment";
+import Moment from 'react-moment'
 
 import {
   StyledContainer,
@@ -11,23 +11,27 @@ import {
   StyledTimeZone,
   StyledWrapper,
   MainContainer,
-} from "./MainElements";
+} from './MainElements'
 
-import sunIcon from "./../../assets/desktop/icon-sun.svg";
-import moonIcon from "./../../assets/desktop/icon-moon.svg";
-import Button from "../Button";
-import Quote from "../Quote";
+import sunIcon from './../../assets/desktop/icon-sun.svg'
+import moonIcon from './../../assets/desktop/icon-moon.svg'
+import Button from '../Button'
+import Quote from '../Quote'
+import { useContext } from 'react'
+import { ClockContext } from '../../context/ClockContext'
 
-const Main = ({
-  isOpen,
-  toggle,
-  abbreviation,
-  city,
-  countryCode,
-  currentTime,
-  dayTime,
-  greeting,
-}) => {
+const Main = () => {
+  const {
+    isOpen,
+    toggle,
+    abbreviation,
+    city,
+    countryCode,
+    currentTime,
+    dayTime,
+    greeting,
+  } = useContext(ClockContext)
+
   return (
     <MainContainer isOpen={isOpen} dayTime={dayTime}>
       <Quote isOpen={isOpen} />
@@ -50,7 +54,7 @@ const Main = ({
             <StyledTimeZone>{abbreviation}</StyledTimeZone>
           </StyledTimeContainer>
           {!countryCode ? (
-            ""
+            ''
           ) : (
             <StyledLocation>
               IN {city}, {countryCode}
@@ -60,7 +64,7 @@ const Main = ({
         <Button toggle={toggle} isOpen={isOpen} />
       </StyledContainer>
     </MainContainer>
-  );
-};
+  )
+}
 
-export default Main;
+export default Main
