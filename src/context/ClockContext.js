@@ -73,8 +73,6 @@ const ClockProvider = ({ children }) => {
       setClientIP(client_ip)
       setIsLoading(false)
       // setError(null);
-
-      getIp()
     } catch (error) {
       console.log('Current Time API Error', error)
       setIsLoading(false)
@@ -87,6 +85,7 @@ const ClockProvider = ({ children }) => {
       const { data } = await axios.get(ipstackURL)
       const { city, country_code } = data
       setCity(city)
+      // console.log(city)
       setCountryCode(country_code)
       setIsLoading(false)
       // setError(null);
@@ -101,6 +100,11 @@ const ClockProvider = ({ children }) => {
     getTime()
     // eslint-disable-next-line
   }, [])
+
+  useEffect(() => {
+    getIp()
+    // eslint-disable-next-line
+  }, [clientIP])
 
   const value = {
     currentTime,
