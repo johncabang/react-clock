@@ -14,11 +14,8 @@ const ClockProvider = ({ children }) => {
   const [weekNumber, setWeekNumber] = useState('')
   const [city, setCity] = useState('')
   const [countryCode, setCountryCode] = useState('')
-
   const [clientIP, setClientIP] = useState('')
-
   const [isLoading, setIsLoading] = useState(true)
-  // const [error, setError] = useState(null);
 
   // Expand More Info Component
 
@@ -72,11 +69,9 @@ const ClockProvider = ({ children }) => {
       checkGreeting(datetime)
       setClientIP(client_ip)
       setIsLoading(false)
-      // setError(null);
     } catch (error) {
       console.log('Current Time API Error', error)
       setIsLoading(false)
-      // setError(error.message);
     }
   }
 
@@ -85,14 +80,11 @@ const ClockProvider = ({ children }) => {
       const { data } = await axios.get(ipstackURL)
       const { city, country_code } = data
       setCity(city)
-      // console.log(city)
       setCountryCode(country_code)
       setIsLoading(false)
-      // setError(null);
     } catch (error) {
       console.log('Location API Error', error)
       setIsLoading(false)
-      // setError(err.message);
     }
   }
 

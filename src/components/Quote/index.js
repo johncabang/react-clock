@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import Axios from "axios";
+import React, { useState, useEffect } from 'react'
+import axios from 'axios'
 
 import {
   StyledAuthor,
@@ -8,26 +8,26 @@ import {
   StyledRefreshIconWrapper,
   StyledRefreshIcon,
   StyledWrapper,
-} from "./QuoteElements";
+} from './QuoteElements'
 
 const Quote = ({ isOpen }) => {
-  const [quoteBody, setQuoteBody] = useState("");
-  const [quoteAuthor, setQuoteAuthor] = useState("");
+  const [quoteBody, setQuoteBody] = useState('')
+  const [quoteAuthor, setQuoteAuthor] = useState('')
 
   const getQuote = async () => {
-    const results = await Axios("https://api.quotable.io/random");
-    setQuoteAuthor(results.data.author);
-    setQuoteBody(results.data.content);
-  };
+    const results = await axios('https://api.quotable.io/random')
+    setQuoteAuthor(results.data.author)
+    setQuoteBody(results.data.content)
+  }
 
   useEffect(() => {
-    getQuote();
-  }, []);
+    getQuote()
+  }, [])
 
   return (
     <>
       {isOpen ? (
-        ""
+        ''
       ) : (
         <StyledContainer>
           <StyledWrapper>
@@ -48,7 +48,7 @@ const Quote = ({ isOpen }) => {
         </StyledContainer>
       )}
     </>
-  );
-};
+  )
+}
 
-export default Quote;
+export default Quote
